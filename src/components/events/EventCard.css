@@ -1,0 +1,170 @@
+.event-card {
+  background: white;
+  border: none;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+}
+
+.event-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.event-card-image {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  width: 100%;
+}
+
+.event-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card-content {
+  padding: 16px 0 0;
+  flex: 1;
+}
+
+.event-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+  line-height: 1.3;
+}
+
+.event-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.event-info .icon {
+  color: #D11F8A;
+  font-size: 14px;
+  min-width: 16px;
+}
+
+.event-info:last-child {
+  margin-bottom: 0;
+}
+
+.event-category {
+  display: none; /* Скрываем категорию, как в макете */
+}
+
+
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.favorite-btn.active {
+  color: #ff4d4d;
+}
+
+.favorite-btn.active:hover {
+  color: #ff3333;
+}
+
+
+.search-results-info {
+  margin-bottom: 20px;
+  padding: 12px 0;
+  color: var(--pink);
+  font-size: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid var(--border-color);
+  letter-spacing: 0.3px;
+}
+
+.no-search-results {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 16px;
+  border: 2px dashed var(--border-color);
+  border-radius: 16px;
+  margin: 20px 0;
+  background: var(--card-bg);
+}
+
+/* ===== ИНФОРМАЦИЯ О ФИЛЬТРЕ ===== */
+.filter-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.filter-badge {
+  background: var(--pink);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-results {
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+/* ===== НИЧЕГО НЕ НАЙДЕНО ===== */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 16px;
+  border: 2px dashed var(--border-color);
+  border-radius: 16px;
+  margin: 20px 0;
+  background: var(--card-bg);
+}

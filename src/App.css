@@ -1,38 +1,248 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  min-height: calc(100vh - 200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --pink: #D11F8A;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+}
+
+.dark-theme {
+  --bg-color: #0b0719;
+  --text-color: #dedede;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.home-page,
+.header, .testimonials {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.featured-section, .featured-right, .featured-right h3 {
+   background-color: var(--bg-color);
+   color: var(--text-color);
+}   
+.upcoming-card,.upcoming-card-content h4, 
+.upcoming-card-content p, .testimonial-card, 
+.testimonial-text, .author-info h4, .author-info p  {
+  background-color: #131721;
+  color: var(--text-color);
+  border: none;
+}
+
+.testimonial-card:hover {
+  background-color: #010101;
+}
+
+.quote-icon {
+  color: #ff0099;
+  opacity: 90;
+}
+
+.section-header h2, .videos-section .section-header h2 {
+  color: var(--text-color);
+} 
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+} */
+
+.main-content {
+  min-height: calc(100vh - 200px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+:root {
+  --pink: #D11F8A;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --border-color: #eaeaea;
+}
+
+.dark-theme {
+  --bg-color: #0b0719;
+  --text-color: #ffffff;
+  --card-bg: #1a0b2e;
+  --border-color: #D11F8A;
+}
+
+
+.home-page,
+.header,
+.testimonials,
+.featured-section,
+.featured-right {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.upcoming-card,
+.testimonial-card,
+.event-card,
+.article-card
+ {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+.upcoming-card:hover,
+.testimonial-card:hover,
+.event-card:hover,
+.article-card:hover,
+.video-card:hover {
+  border-color: var(--pink) !important;
+  transform: translateY(-2px);
+}
+
+.upcoming-card-content h4,
+.upcoming-card-content p,
+.testimonial-text,
+.author-info h4,
+.author-info p,
+.section-header h2,
+.videos-section .section-header h2,
+.featured-right h3 {
+  color: var(--text-color);
+}
+
+.quote-icon {
+  color: var(--pink);
+  opacity: 0.8;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 62.5%;
+  overflow: hidden;
+}
+
+.video-thumbnail img,
+.video-thumbnail video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.video-overlay h4 {
+  color: white;
+}
+.video-card,
+.videos-grid .video-card,
+.video-thumbnail, .testimonial-card {
+  border: none !important;
+  outline: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dark-theme .header,
+.dark-theme .header-top,
+.dark-theme .header-bottom,
+.dark-theme .header-nav{
+  background: rgba(10, 8, 18, 0.866) !important;
+  border: none;
 }
+.dark-theme  .nav-link {
+  color: white;
+}
+
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --pink: #D11F8A;
+  --pink-light: rgba(209, 31, 138, 0.1);
+  --pink-gradient: linear-gradient(135deg, #D11F8A 0%, #9b1f6f 100%);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 30px rgba(209, 31, 138, 0.15);
+  --shadow-lg: 0 20px 40px rgba(209, 31, 138, 0.2);
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  
+  /* cветлая тема */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffff;
+  --border-color: #eaeaea;
+  --header-bg: #ffffff;
+  --footer-bg: #f8f8f8;
+  --input-bg: #ffffff;
+  --hover-color: #D11F8A;
+}
+
+/* темная тема */
+
+.dark-theme {
+  --bg-color: #0b0719;
+  --text-color: #ffffff;
+  --card-bg: #1a0b2e;
+  --border-color: rgba(209, 31, 138, 0.2);
+  --header-bg: #0b0719;
+  --footer-bg: #0b0719;
+  --input-bg: #1a0b2e;
+  --hover-color: #ff6bcb;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 30px rgba(209, 31, 138, 0.25);
+}
+

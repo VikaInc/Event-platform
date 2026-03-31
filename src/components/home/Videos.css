@@ -1,0 +1,137 @@
+/* ===== СЕКЦИЯ НА ВСЮ ШИРИНУ ===== */
+.videos-section {
+  margin: 80px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.videos-section .section-header {
+  width: 1100px; /* Ширина как у сетки */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.videos-section .section-header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.videos-section .section-header .view-all {
+  color: #D11F8A;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.videos-section .section-header .view-all:hover {
+  text-decoration: underline;
+}
+
+/* ===== КОНТЕЙНЕР 2×2 ПО ЦЕНТРУ ===== */
+.videos-grid {
+  width: 1100px; /* 540 + 540 + 20 */
+  display: grid;
+  grid-template-columns: 540px 540px;
+  grid-template-rows: 342px 342px;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* ===== КАРТОЧКА ===== */
+.video-card {
+  width: 540px;
+  height: 342px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.video-card:hover {
+  border-color: #D11F8A;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(209, 31, 138, 0.15);
+}
+
+/* ===== ОБЛОЖКА ===== */
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== КАРТИНКА И ВИДЕО ===== */
+.video-poster,
+.video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-poster {
+  z-index: 1;
+}
+
+.video-player {
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover .video-player {
+  opacity: 1;
+}
+
+.video-card:hover .video-poster {
+  opacity: 0;
+}
+
+/* ===== ТЕКСТ СНИЗУ ===== */
+.video-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
+  z-index: 3;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover .video-overlay {
+  opacity: 0;
+}
+
+.video-overlay h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: white;
+}
+
+.video-overlay p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}

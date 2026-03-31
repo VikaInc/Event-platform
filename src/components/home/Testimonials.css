@@ -1,0 +1,321 @@
+.testimonials {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.section-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.view-all {
+  color: var(--pink);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* ===== ФОРМА ДОБАВЛЕНИЯ ===== */
+.add-comment-trigger {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--pink);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.comment-input-placeholder {
+  flex: 1;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 15px;
+  padding: 8px 0;
+}
+
+.add-comment-form {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 24px 0;
+}
+
+.comment-form-content {
+  flex: 1;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 12px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.5;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-bottom-color: var(--pink);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.5;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.cancel-btn:hover {
+  opacity: 1;
+}
+
+.submit-btn {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ===== СПИСОК КОММЕНТАРИЕВ ===== */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.comment-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-avatar-small {
+  width: 40px;
+  height: 40px;
+  background: #e0e0e0;
+  color: #666;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.comment-date {
+  color: var(--text-color);
+  opacity: 0.4;
+  font-size: 13px;
+}
+
+.comment-text {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 8px 0 12px;
+}
+
+/* ===== КНОПКИ ДЕЙСТВИЙ (НЕЗАМЕТНЫЕ) ===== */
+.comment-actions {
+  display: flex;
+  justify-content: end;
+  gap: 16px;
+  margin-top: 4px;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.comment-item:hover .comment-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: var(--pink);
+}
+
+.action-btn.delete:hover {
+  color: #d32f2f;
+}
+
+/* ===== РЕДАКТИРОВАНИЕ ===== */
+.edit-form {
+  margin: 8px 0;
+}
+
+.edit-textarea {
+  width: 100%;
+  padding: 12px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 1.5;
+  resize: vertical;
+  margin-bottom: 12px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.save-edit-btn {
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cancel-edit-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ===== КНОПКА ПОКАЗАТЬ ЕЩЕ ===== */
+.load-more-container {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.load-more-comments-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  border-radius: 30px;
+  opacity: 0.7;
+}
+
+.load-more-comments-btn:hover {
+  opacity: 1;
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+/* ===== ПУСТОЕ СОСТОЯНИЕ ===== */
+.no-comments {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ===== ТЕМНАЯ ТЕМА ===== */
+.dark-theme .comment-avatar-small {
+  background: #333;
+  color: #aaa;
+}

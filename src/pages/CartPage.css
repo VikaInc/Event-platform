@@ -1,0 +1,370 @@
+.cart-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.cart-header h1 {
+  font-size: 28px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.cart-count {
+  color: var(--pink);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.cart-item:hover {
+  border-color: var(--pink);
+  box-shadow: 0 4px 12px rgba(209, 31, 138, 0.1);
+}
+
+.cart-item-image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cart-item-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.3s;
+}
+
+.cart-item-remove:hover {
+  color: #ff4444;
+}
+
+.cart-item-details {
+  display: flex;
+  gap: 20px;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.cart-item-details p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-item-details svg {
+  color: var(--pink);
+  font-size: 14px;
+}
+
+.cart-item-price {
+  font-weight: 600;
+  color: var(--pink) !important;
+  opacity: 1 !important;
+}
+
+.cart-item-book {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: var(--pink);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.cart-item-book:hover {
+  opacity: 0.9;
+}
+
+.booking-form {
+  margin-top: 10px;
+  padding: 20px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.booking-form h4 {
+  font-size: 15px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.ticket-counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.counter-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.counter-btn:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.ticket-count {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+  min-width: 30px;
+  text-align: center;
+}
+
+.booking-total {
+  font-size: 15px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  padding: 10px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.total-price {
+  color: var(--pink);
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirm-btn {
+  background: var(--pink);
+  color: white;
+}
+
+.confirm-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.confirm-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+.cart-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  color: var(--pink);
+  opacity: 0.3;
+  margin-bottom: 20px;
+}
+
+.cart-empty-state h2 {
+  font-size: 22px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cart-empty-state p {
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.cart-action-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: opacity 0.3s;
+}
+
+.cart-action-btn:hover {
+  opacity: 0.9;
+}
+
+.cart-loading {
+  text-align: center;
+  padding: 100px;
+  color: var(--pink);
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+  }
+  
+  .cart-item-image {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .cart-item-details {
+    gap: 12px;
+  }
+}
+
+/* Уведомление */
+.cart-notification {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  min-width: 320px;
+  padding: 16px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.cart-notification-success {
+  border-left: 4px solid #4caf50;
+}
+
+.cart-notification-info {
+  border-left: 4px solid #2196f3;
+}
+
+.cart-notification-error {
+  border-left: 4px solid #f44336;
+}
+
+.cart-notification-icon {
+  font-size: 24px;
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.cart-notification-info .cart-notification-icon {
+  color: #2196f3;
+}
+
+.cart-notification-error .cart-notification-icon {
+  color: #f44336;
+}
+
+.cart-notification-message {
+  flex: 1;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.5;
+}
